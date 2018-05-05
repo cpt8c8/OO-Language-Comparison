@@ -28,11 +28,12 @@ One of Kotlin's most loved features is its null safety, which protects it from n
 
 Other things of note include that Kotlin is completely inter-operable with Java, its ability to return multiple values, and the ability to have default and named arguments (as shown below).
 
-``fun example(num: Int, str: String = "9") {
-}
+``fun example(num: Int, str: String = "9") {}``
 
-example(15, "Hey")
+``example(15, "Hey")
+
 example(str = "Name", num = 45) //Named argument
+
 example(45) //usage of default argument``
 
 ##### Swift
