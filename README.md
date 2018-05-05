@@ -1,5 +1,5 @@
 # OO-Language-Comparison
-## Kotlin Vs. Swift
+## Kotlin Vs. Go
 ## Samantha Trenholm and Matt Tschannen
 
 ### Language purpose/genesis
@@ -41,7 +41,6 @@ example(45) //usage of default argument
 ### Name spaces
 #### How are name spaces implemented? 
 ##### Kotlin
-
 
 ##### Swift
 
