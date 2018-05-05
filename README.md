@@ -1,234 +1,234 @@
-##### OO-Language-Comparison
-#### Kotlin Vs. Swift
-#### Samantha Trenholm and Matt Tschannen
+# OO-Language-Comparison
+## Kotlin Vs. Swift
+## Samantha Trenholm and Matt Tschannen
 
 ### Language purpose/genesis
-## Why was the language created?
-# Kotlin
+#### Why was the language created?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## What problems was the language trying to address?
-# Kotlin
+#### What problems was the language trying to address?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Is the language a reaction to a previous language or a replacement for another language?
-# Kotlin
+#### Is the language a reaction to a previous language or a replacement for another language?
+##### Kotlin
 
-# Swift
+##### Swift
 
 
 ### Unique features of the language
-## Does the language have any particularly unique features?
-# Kotlin
+#### Does the language have any particularly unique features?
+##### Kotlin
 
-# Swift
+##### Swift
 
 ### Name spaces
-## How are name spaces implemented?
-# Kotlin
+#### How are name spaces implemented?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## How are name spaces used?
-# Kotlin
+#### How are name spaces used?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Types
-## What types does the language support?
-# Kotlin
+#### What types does the language support?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Are both reference and value types supported?
-# Kotlin
+#### Are both reference and value types supported?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Can new value types be created?
-# Kotlin
+#### Can new value types be created?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Classes
-## Defining
-# Kotlin
+#### Defining
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Creating new instances
-# Kotlin
+#### Creating new instances
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Constructing/initializing
-# Kotlin
+#### Constructing/initializing
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Destructing/de-initializing
-# Kotlin
+#### Destructing/de-initializing
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Instance reference name in data type (class)
+#### Instance reference name in data type (class)
         this? self?
-# Kotlin
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Properties
-## Getters and setters…write your own or built in?
-# Kotlin
+#### Getters and setters…write your own or built in?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Backing variables?
-# Kotlin
+#### Backing variables?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Computed properties?
-# Kotlin
+#### Computed properties?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Interfaces / protocols
-## What does the language support?
-# Kotlin
+#### What does the language support?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## What abilities does it have?
-# Kotlin
+#### What abilities does it have?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## How is it used?
+#### How is it used?
 
 ### Inheritance / extension
-# Kotlin
+#### Kotlin
 
-# Swift
+#### Swift
 
     
 ### Reflection
-## What reflection abilities are supported?
-# Kotlin
+#### What reflection abilities are supported?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## How is reflection used?
-# Kotlin
+#### How is reflection used?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Memory management
-## How is it handled?
-# Kotlin
+#### How is it handled?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## How does it work?
-# Kotlin
+#### How does it work?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Garbage collection?
-# Kotlin
+#### Garbage collection?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Automatic reference counting?
-# Kotlin
+#### Automatic reference counting?
+##### Kotlin
 
-# Swift
+##### Swift
 
    
 ### Comparisons of references and values
-## How are values compared? (i.e. comparing two strings)
-# Kotlin
+#### How are values compared? (i.e. comparing two strings)
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Null/nil references
-## Which does the language use? (null/nil/etc)
-# Kotlin
+#### Which does the language use? (null/nil/etc)
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Does the language have features for handling null/nil references?
-# Kotlin
+#### Does the language have features for handling null/nil references?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Errors and exception handling
-# Kotlin
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Lambda expressions, closures, or functions as types
-# Kotlin
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Implementation of listeners and event handlers
-# Kotlin
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Singleton
-## How is a singleton implemented?
-# Kotlin
+#### How is a singleton implemented?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Can it be made thread-safe?
-# Kotlin
+#### Can it be made thread-safe?
+##### Kotlin
 
-# Swift
+##### Swift
 
-## Can the singleton instance be lazily instantiated?
-# Kotlin
+#### Can the singleton instance be lazily instantiated?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Procedural programming
-## Does the language support procedural programming?
-# Kotlin
+#### Does the language support procedural programming?
+##### Kotlin
 
-# Swift
+##### Swift
 
 
 ### Functional programming
-## Does the language support functional programming?
-# Kotlin
+#### Does the language support functional programming?
+##### Kotlin
 
-# Swift
+##### Swift
 
     
 ### Multithreading
-## Threads or thread-like abilities
-# Kotlin
+#### Threads or thread-like abilities
+##### Kotlin
 
-# Swift
+##### Swift
 
-## How is multitasking accomplished?
-# Kotlin
+#### How is multitasking accomplished?
+##### Kotlin
 
-# Swift
+##### Swift
 
 
