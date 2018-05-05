@@ -6,18 +6,20 @@
 #### Why was the language created?
 ##### Kotlin
 Kotlin was developed by JetBrains primarily for internal use. It was intended to boost productivty and improve workflow, which would result in improved sales.
-##### Swift
+##### Go
+Go was designed by engineers at google with the purpose of creating a language that would resolve a lot of common criticisms of popular languages while maintaining the strengths that had made them so popular. 
 
 #### What problems was the language trying to address?
 ##### Kotlin
 JetBrains was looking for a language that adresses their needs, had fast compile times, was streamlined, and could ineract with a replace Java.
-##### Swift
+##### Go
+Some specific goals for Go were creating a language that supported static typing and was easily scalable like Java, didn't require a lot of boilerplate like Ruby or Python, and - what I see as the most powerful aspect of go - had good support for networking and multiprocessing.
 
 #### Is the language a reaction to a previous language or a replacement for another language?
 ##### Kotlin
 It was largely intended, as mentioned above, to be a replacement for Java.
-##### Swift
-
+##### Go
+The creation of Go was certainly a reaction to shortfalls the creators saw with a lot of contemporary languages, especially C++.
 
 ### Unique features of the language
 #### Does the language have any particularly unique features?
