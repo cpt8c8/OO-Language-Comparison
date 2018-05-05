@@ -24,18 +24,16 @@ It was largely intended, as mentioned above, to be a replacement for Java.
 ##### Kotlin
 One of Kotlin's most loved features is its null safety, which protects it from null pointer exceptions. By using its simple ? operator, it first checks the value to see if it is null or not. If it’s not null then only then it will perform the next operation. It is used as shown. 
 
-''val str:String? = "name"''
+``val str:String? = "name"``
 
 Other things of note include that Kotlin is completely inter-operable with Java, its ability to return multiple values, and the ability to have default and named arguments (as shown below).
 
-''fun example(num: Int, str: String = "9") {
+``fun example(num: Int, str: String = "9") {
 }
 
 example(15, "Hey")
-
 example(str = "Name", num = 45) //Named argument
-
-example(45) //usage of default argument''
+example(45) //usage of default argument``
 
 ##### Swift
 
