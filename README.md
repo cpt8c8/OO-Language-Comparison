@@ -27,8 +27,8 @@ One of Kotlin's most loved features is its null safety, which protects it from n
 ```val str:String? = "name"```
 
 Other things of note include that Kotlin is completely inter-operable with Java, its ability to return multiple values, and the ability to have default and named arguments (as shown below).
-
-```fun example(num: Int, str: String = "9") {}
+```
+fun example(num: Int, str: String = "9") {}
 
 example(15, "Hey")
 
