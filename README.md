@@ -95,7 +95,8 @@ New concrete types can certainly be created through structs, but there isn’t s
 #### Defining
 ##### Kotlin
 In Kotlin this is done through Data Classes. Refer to the code below for a proper definition.
-```data class User(val name: String, val age: Int)
+```kotlin
+data class User(val name: String, val age: Int)
 ```
 ##### Go
 The syntax for creating structs in go is similar to C. Refer to the code below for proper struct definition.
@@ -108,7 +109,8 @@ type person struct {
 #### Creating new instances
 ##### Kotlin
 A instance of a Data Class can be created as shown below.
-```data class Person(val name: String) {
+```kotlin
+data class Person(val name: String) {
     var age: Int = 0
 }//here the datan class is defined
 
