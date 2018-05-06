@@ -30,7 +30,7 @@ One of Kotlin's most loved features is its null safety, which protects it from n
 val str:String? = "name"
 ```
 
-Other things of note include that Kotlin is completely inter-operable with Java, its ability to return multiple values, and the ability to have default and named arguments (as shown below).
+Other things of note include that Kotlin is completely inter-operable with Java, its ability to return multiple values, that it does not require a ";" at the end of a line, and the ability to have default and named arguments (as shown below).
 ```kotlin
 fun example(num: Int, str: String = "9") {}
 
@@ -75,26 +75,28 @@ func main() {
 ### Types
 #### What types does the language support?
 ##### Kotlin
-
+Kotlin can represent numbers through the types Byte, Short, Int, Long, Float, and Double. It also supports Char, String, and Boolean. 
 ##### Go
 Go supports several basic int, float and string types, as well as derived types. Many more types are available through the go/types library and others. 
 
 #### Are both reference and value types supported?
 ##### Kotlin
-
+Kotlin supports both reference and value tyoes.
 ##### Go
 Reference and value types are both supported, keeping in line with Go’s C heritage.
 
 #### Can new value types be created?
 ##### Kotlin
-
+Kotlin does not facilitate the creation of basic types.
 ##### Go
 New concrete types can certainly be created through structs, but there isn’t support to create additional basic types.
     
 ### Classes
 #### Defining
 ##### Kotlin
-
+In Kotlin this is done through Data Classes. Refer to the code below for a proper definition.
+```data class User(val name: String, val age: Int)
+```
 ##### Go
 The syntax for creating structs in go is similar to C. Refer to the code below for proper struct definition.
 ```go
@@ -105,7 +107,14 @@ type person struct {
 ```
 #### Creating new instances
 ##### Kotlin
+A instance of a Data Class can be created as shown below.
+```data class Person(val name: String) {
+    var age: Int = 0
+}//here the datan class is defined
 
+val person1 = Person("John")
+//here an instance is created
+```
 ##### Go
 
 #### Constructing/initializing
