@@ -96,7 +96,13 @@ New concrete types can certainly be created through structs, but there isn’t s
 ##### Kotlin
 
 ##### Go
-
+The syntax for creating structs in go is similar to C. Refer to the code below for proper struct definition.
+```go
+type person struct {
+    name string
+    age  int
+}
+```
 #### Creating new instances
 ##### Kotlin
 
