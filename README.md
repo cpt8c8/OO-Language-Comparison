@@ -26,10 +26,12 @@ The creation of Go was certainly a reaction to shortfalls the creators saw with 
 ##### Kotlin
 One of Kotlin's most loved features is its null safety, which protects it from null pointer exceptions. By using its simple ? operator, it first checks the value to see if it is null or not. If it’s not null then only then it will perform the next operation. It is used as shown. 
 
-```val str:String? = "name"```
+```kotlin
+val str:String? = "name"
+```
 
 Other things of note include that Kotlin is completely inter-operable with Java, its ability to return multiple values, and the ability to have default and named arguments (as shown below).
-```
+```kotlin
 fun example(num: Int, str: String = "9") {}
 
 example(15, "Hey")
