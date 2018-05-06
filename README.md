@@ -41,7 +41,7 @@ example(45) //usage of default argument
 ##### Go
 One interesting feature of go is its concurrency features, namely the use of goroutines and channels. These features allow for code to be optimized for parallelism and asynchrony with ease. Any function can be called as a goroutine in Go, and Go will automatically handle whether or not a new thread should be started or if it would be more efficient to execute the operation on an existing thread. This minimizes excessive Thread creation which can actually slow down your program,  because despite the advantages of parallel processing thread creation is a fairly expensive task. To allow for these go routines to exchange information asynchronously, Go supports the use of channels which provide a FIFO storage entity that goroutines can use to drop off and pick up information when they are ready to do so.
 
-``` 
+```go
 func worker(done chan bool) {
     fmt.Print("working...")
     time.Sleep(time.Second)
