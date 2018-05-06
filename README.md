@@ -38,212 +38,212 @@ example(str = "Name", num = 45) //Named argument
 
 example(45) //usage of default argument
 ```
-##### Swift
+##### Go
 
 ### Name spaces
 #### How are name spaces implemented? 
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### How are name spaces used?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Types
 #### What types does the language support?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Are both reference and value types supported?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Can new value types be created?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Classes
 #### Defining
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Creating new instances
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Constructing/initializing
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Destructing/de-initializing
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Instance reference name in data type (class)
         this? self?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Properties
 #### Getters and setters…write your own or built in?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Backing variables?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Computed properties?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Interfaces / protocols
 #### What does the language support?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### What abilities does it have?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### How is it used?
 
 ### Inheritance / extension
 #### Kotlin
 
-#### Swift
+#### Go
 
     
 ### Reflection
 #### What reflection abilities are supported?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### How is reflection used?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Memory management
 #### How is it handled?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### How does it work?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Garbage collection?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Automatic reference counting?
 ##### Kotlin
 
-##### Swift
+##### Go
 
    
 ### Comparisons of references and values
 #### How are values compared? (i.e. comparing two strings)
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Null/nil references
 #### Which does the language use? (null/nil/etc)
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Does the language have features for handling null/nil references?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Errors and exception handling
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Lambda expressions, closures, or functions as types
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Implementation of listeners and event handlers
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Singleton
 #### How is a singleton implemented?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Can it be made thread-safe?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### Can the singleton instance be lazily instantiated?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Procedural programming
 #### Does the language support procedural programming?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 
 ### Functional programming
 #### Does the language support functional programming?
 ##### Kotlin
 
-##### Swift
+##### Go
 
     
 ### Multithreading
 #### Threads or thread-like abilities
 ##### Kotlin
 
-##### Swift
+##### Go
 
 #### How is multitasking accomplished?
 ##### Kotlin
 
-##### Swift
+##### Go
 
 
