@@ -1,25 +1,22 @@
 # OO-Language-Comparison
-## Kotlin Vs. Go
+## Kotlin Vs. Python
 ## Samantha Trenholm and Matt Tschannen
 
 ### Language purpose/genesis
 #### Why was the language created?
 ##### Kotlin
 Kotlin was developed by JetBrains primarily for internal use. It was intended to boost productivty and improve workflow, which would result in improved sales.
-##### Go
-Go was designed by engineers at google with the purpose of creating a language that would resolve a lot of common criticisms of popular languages while maintaining the strengths that had made them so popular. 
+##### Python
 
 #### What problems was the language trying to address?
 ##### Kotlin
 JetBrains was looking for a language that adresses their needs, had fast compile times, was streamlined, and could ineract with and replace Java.
-##### Go
-Some specific goals for Go were creating a language that supported static typing and was easily scalable like Java, didn't require a lot of boilerplate like Ruby or Python, and - what I see as the most powerful aspect of go - had good support for networking and multiprocessing.
+##### Python
 
 #### Is the language a reaction to a previous language or a replacement for another language?
 ##### Kotlin
 It was largely intended, as mentioned above, to be a replacement for Java.
-##### Go
-The creation of Go was certainly a reaction to shortfalls the creators saw with a lot of contemporary languages, especially C++.
+##### Python
 
 ### Unique features of the language
 #### Does the language have any particularly unique features?
@@ -40,31 +37,17 @@ example(str = "Name", num = 45) //Named argument
 
 example(45) //usage of default argument
 ```
-##### Go
-One interesting feature of go is its concurrency features, namely the use of goroutines and channels. These features allow for code to be optimized for parallelism and asynchrony with ease. Any function can be called as a goroutine in Go, and Go will automatically handle whether or not a new thread should be started or if it would be more efficient to execute the operation on an existing thread. This minimizes excessive Thread creation which can actually slow down your program,  because despite the advantages of parallel processing thread creation is a fairly expensive task. To allow for these go routines to exchange information asynchronously, Go supports the use of channels which provide a FIFO storage entity that goroutines can use to drop off and pick up information when they are ready to do so.
+##### Python
 
-```go
-func worker(done chan bool) {
-    fmt.Print("working...")
-    time.Sleep(time.Second)
-    fmt.Println("done")
+```python
 
-    done <- true
-}
-func main() {
-
-    done := make(chan bool, 1)
-    go worker(done)
-
-    <-done
-} 
 ```
 
 ### Name spaces
 #### How are name spaces implemented? 
 ##### Kotlin
 Kotlin follows Java's naming conventions. Names of packages are always lower case and do not use underscores, names of classes and objects start with an upper case letter and use camel humps, names of functions, properties and local variables start with a lower case letter and use camel humps and no underscores (with the exception of factory functions used to create instances of classes, which can have the same name as the class being created), and names for tests (and only tests) can have method names with spaces enclosed in backticks. The naming conventions for properties are as follows: names of constants should use uppercase underscore-separated names, names of top-level or object properties which hold objects with behavior or mutable data should use regular camel-hump names, names of properties holding references to singleton objects can use the same naming style as object declarations, and for enum constants, it's OK to use either uppercase underscore-separated names (enum class Color { RED, GREEN }) or regular camel-humps names starting with an uppercase letter, depending on the usage.
-##### Go
+##### Python
 
 #### How are name spaces used?
 ##### Kotlin
@@ -73,28 +56,25 @@ Kotlin's namespaces are implemented very similarly to Java. The package is descr
 package foo.bar
 import foo.*
 ```
-##### Go
+##### Python
 
     
 ### Types
 #### What types does the language support?
 ##### Kotlin
 Kotlin can represent numbers through the types Byte, Short, Int, Long, Float, and Double. It also supports Char, String, and Boolean. 
-##### Go
-Go supports several basic int, float and string types, as well as derived types. Many more types are available through the go/types library and others. 
+##### Python
 
 #### Are both reference and value types supported?
 ##### Kotlin
 Kotlin supports both reference and value tyoes.
-##### Go
-Reference and value types are both supported, keeping in line with Go’s C heritage.
+##### Python
 
 #### Can new value types be created?
 ##### Kotlin
 Kotlin does not facilitate the creation of basic types.
-##### Go
-New concrete types can certainly be created through structs, but there isn’t support to create additional basic types.
-    
+##### Python
+   
 ### Classes
 #### Defining
 ##### Kotlin
@@ -104,14 +84,8 @@ class Example {
     // ...
 }
 ```
-##### Go
-The syntax for creating structs in go is similar to C. Refer to the code below for proper struct definition.
-```go
-type person struct {
-    name string
-    age  int
-}
-```
+##### Python
+
 #### Creating new instances
 ##### Kotlin
 A instance of a Class can be created as shown below.
@@ -120,7 +94,7 @@ val ex = Example()
 //or
 val exXx = ExXxample("Like that Vin Diesal movie")
 ```
-##### Go
+##### Python
 
 #### Constructing/initializing
 ##### Kotlin
@@ -146,7 +120,7 @@ class Example(val exOne: String) {
     }
 }
 ```
-##### Go
+##### Python
 
 #### Destructing/de-initializing
 ##### Kotlin
@@ -155,7 +129,7 @@ Objects in Kotlin can be destructured into multiple values.
 val (variableOne, variableTwo) = example 
 ```
 This leaves us with two newly declared variables.
-##### Go
+##### Python
 
 #### Instance reference name in data type (class)
 ##### Kotlin
@@ -167,7 +141,7 @@ class Example(val exOne: String) {
     }
 }
 ```
-##### Go
+##### Python
 
 ### Properties
 #### Getters and setters…write your own or built in?
@@ -209,12 +183,12 @@ class Example(exOne: Int, exTwo: String, exThree: Int) {
         }
 }
 ```
-##### Go
+##### Python
 
 #### Backing variables?
 ##### Kotlin
 In Kotlin you have backing fields, which help you refer to the property inside the getter and setter methods. You must use them becuase using the property directly inside the getter or setter causes a recursive call which will generate a StackOverflowError. The Kotlin code in the getters and setters example has these in use (the fields have been named "field" for ease of identification). 
-##### Go
+##### Python
 
 #### Computed properties?
 ##### Kotlin
@@ -235,19 +209,19 @@ class Delegate {
 }
 ```
 So, the get() and set() of the property "ex" are delegated to the getValue() and setValue() methods of the "Delegate()" class. Kotlin's standard library contains a few very helpful standard delegates such as Lazy() (for if the value gets computed only upon first access) and Delegates.observable() (listeners that get notified about changes to this property). 
-##### Go
+##### Python
 
     
 ### Interfaces / protocols
 #### What does the language support?
 ##### Kotlin
 Kotlin does support interfaces, and they are implemented very similarly to Java 8. A class can implement many interfaces.
-##### Go
+##### Python
 
 #### What abilities does it have?
 ##### Kotlin
 Kotlin interfaces can contain declarations of abstract methods and method implementations. However, they cannot store state. They can have properties as long as they are abstract or provide accessor implementations.
-##### Go
+##### Python
 
 #### How is it used?
 ##### Kotlin
@@ -266,7 +240,7 @@ class Child : ExampleInterface {
     }
 }
 ```
-##### Go
+##### Python
 
 ### Inheritance / extension
 #### Kotlin
@@ -305,14 +279,14 @@ class Sub : Super() {
 }
 ```
 As a final note, all classes in Kotlin have a common superclass "Any", that is the default superclass for a class with no supertypes declared.
-#### Go
+#### Python
 
     
 ### Reflection
 #### What reflection abilities are supported?
 ##### Kotlin
 Kotlin allows for the use of reflection to see what type, class, properties, and functions an object possesses. It also allows for the referencing of constructors.
-##### Go
+##### Python
 
 #### How is reflection used?
 ##### Kotlin
@@ -330,29 +304,29 @@ fun main(args: Array<String>) {
     println(::x.name) 
 }
 ```
-##### Go
+##### Python
 
     
 ### Memory management
 #### How is it handled?
 ##### Kotlin
 With Kotlin (much like Java), all objects are placed onto a heap divided into two spaces. Once full, garbage collection scans through the heap.
-##### Go
+##### Python
 
 #### How does it work?
 ##### Kotlin
 The first of said spaces is the nursery, which holds younger objects and causes garbage collection to run once full. If an object is "old" enough it will be moved into the second space, i.e. the old space, by the garbage collector instead of being destroyed. If the old space hits capacity the garbage collector will run on it, destroying objects that are not being used.
-##### Go
+##### Python
 
 #### Garbage collection?
 ##### Kotlin
 As mentioned above, Kotlin does take advantage of garbage collection.
-##### Go
+##### Python
 
 #### Automatic reference counting?
 ##### Kotlin
 Kotlin does not have automatic reference counting. Its use of garbage collection makes such a feature unneeded. 
-##### Go
+##### Python
 
    
 ### Comparisons of references and values
@@ -365,14 +339,14 @@ Kotlin uses == and != for comparison. They reference structual integrity, with =
     x?.equals(y) ?: (y === null)
 ```
 As for referential equality, Kotlin uses === and !== to check if references are pointing to the same object. 
-##### Go
+##### Python
 
     
 ### Null/nil references
 #### Which does the language use? (null/nil/etc)
 ##### Kotlin
 Kotlin uses "null" for empty objects and null pointers. 
-##### Go
+##### Python
 
 #### Does the language have features for handling null/nil references?
 ##### Kotlin
@@ -381,7 +355,7 @@ Many of Kotlin's features were created with prevnting danger that could occur fr
 val str:String? = "name"
 ``` 
 As a last note, Kotlin has access to the NullPointerException for error handling in regard to null values.
-##### Go
+##### Python
 
     
 ### Errors and exception handling
@@ -404,7 +378,7 @@ Kotlin, more uniquely, also allows try functions to return values. In addition, 
     val x = obj.input ?: woops("invalid input")
     println(x)
 ```
-##### Go
+##### Python
 
     
 ### Lambda expressions, closures, or functions as types
@@ -415,7 +389,7 @@ val example = { x: Int, y: Int -> x + y }
 //example = object holding function
 //x, y = arguments passed to function
 ```
-##### Go
+##### Python
 
     
 ### Implementation of listeners and event handlers
@@ -425,7 +399,7 @@ Kotlin has a very streamlined implemtation of listeners and event handlers. Its 
 fun setOnClickListener(listener: (View) -> Unit)
 button.setOnClickListener({ view -> doSomething() })
 ```
-##### Go
+##### Python
 
     
 ### Singleton
@@ -439,38 +413,38 @@ object Singleton {
     }
 }
 ```
-##### Go
+##### Python
 
 #### Can it be made thread-safe?
 ##### Kotlin
 Singletons can be made thread safe in Kotlin.
-##### Go
+##### Python
 
 #### Can the singleton instance be lazily instantiated?
 ##### Kotlin
 In Kotlin, singletons can be lazily instantiated after it is first accessed. 
-##### Go
+##### Python
 
     
 ### Procedural programming
 #### Does the language support procedural programming?
 ##### Kotlin
 Kotlin supports procedural programming. So, functions and variables can be defined without placing them explicitly in classes. 
-##### Go
+##### Python
 
 
 ### Functional programming
 #### Does the language support functional programming?
 ##### Kotlin
 Kotlin supports functional programming. It allows for the use of both OO and FP styles, or mixed elements of the two. The FP styles include, but are not limited too, higher-order functions, function types, and lambdas.
-##### Go
+##### Python
 
     
 ### Multithreading
 #### Threads or thread-like abilities
 ##### Kotlin
 Kotlin supports the use of both threads and coroutines.
-##### Go
+##### Python
 
 #### How is multitasking accomplished?
 ##### Kotlin
@@ -489,6 +463,6 @@ In Kotlin, you can create threads either by extending the Thread class or implem
 ```
 Either way, the thread must be started by calling start() in main. 
 I also mentioned that Kotlin supports coroutines. That is actually only partially true, as currently coroutines are only experimental in Kotlin. A coroutine is a computation that can be suspended without blocking a thread. Blocking threads is fairly expensive, so coroutines exist as a method that is less expensive to suspend. That being said, coroutines are only suspendable at specific points. For a coroutine to be blocked, a suspend call must be declared with "suspend" before "fun".
-##### Go
+##### Python
 
 
