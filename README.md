@@ -7,16 +7,19 @@
 ##### Kotlin
 Kotlin was developed by JetBrains primarily for internal use. It was intended to boost productivty and improve workflow, which would result in improved sales.
 ##### Python
+Python was created as a pet project by Guido van Rossum, originally intended to be a scripting language that took ideas from an earlier general purpose called ABC.
 
 #### What problems was the language trying to address?
 ##### Kotlin
 JetBrains was looking for a language that adresses their needs, had fast compile times, was streamlined, and could ineract with and replace Java.
 ##### Python
+Python was created with the goals of being extremely readable and high level, and being very extensible, allowing it to have lots of inherent multi-paradigm support and making it easy to add even more programming paradigms beyond what is included in the vanilla distribution.
 
 #### Is the language a reaction to a previous language or a replacement for another language?
 ##### Kotlin
 It was largely intended, as mentioned above, to be a replacement for Java.
 ##### Python
+Python was a reaction to essentially the entire ecosystem of lower-level, abstract languages. It brought object oriented, functional and other concepts into one package that emphasized readability and simplicity
 
 ### Unique features of the language
 #### Does the language have any particularly unique features?
@@ -38,9 +41,27 @@ example(str = "Name", num = 45) //Named argument
 example(45) //usage of default argument
 ```
 ##### Python
-
+The truly unique thing about python is its simplicity, syntax is unobtrustive. Available libraries are also exaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets do the exact same thing but the python code looks much cleaner
 ```python
+data = Series(['A','B','C','D','E','F'], index = [0,2,5,7,12,14])
+data.reindex(range(14),method='ffill')
+```
+```c
+char array1[6][2] = {{'A','0'},{'B','2'},{'C','5'},{'D','7'},{'E','12'},{'F','14'}};
+char array2[14];
+int hold = 0;
+int arrayidx = 0;
 
+for(int i = 0; i < 14; i++){
+	if(atoi(array1[arrayidx][1]) == i){
+		array2[i] = array1[arrayidx][0];
+		hold = array1[arrayidx][0];
+		arrayidx++;
+	}
+	else{
+		array2[i] = hold;
+	}
+}
 ```
 
 ### Name spaces
