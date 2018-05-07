@@ -266,7 +266,41 @@ class Child : ExampleInterface {
 
 ### Inheritance / extension
 #### Kotlin
+Inheritance in Kotlin is similar to inheritance in Java. A class the extends another is declared as such:
+```kotlin
+class SuperClass{
+//...
+}
 
+class SubClass : SuperClass {
+//...
+}
+```
+For a subclass to override a method in a superclass, the method in the superclass must be strictly annotated as overridable (using the open modifier).
+```kotlin
+open class Super {
+    open fun foo() {}
+    fun bar() {}
+}
+class Sub() : Super() {
+    override fun foo() {}
+}
+```
+The overriding of properties is handled the same way. In order to call the superclass implementation of a function, you would use the "super@" modifier as shown.
+```kotlin
+class Sub : Super() {
+    override fun f() { /* ... */ }
+    override val x: Int get() = 0
+    
+    inner class Example {
+        fun ex() {
+            super@Sub.f() 
+            println(super@Sub.x) 
+        }
+    }
+}
+```
+As a final note, all classes in Kotlin have a common superclass "Any", that is the default superclass for a class with no supertypes declared.
 #### Go
 
     
@@ -361,14 +395,14 @@ class Child : ExampleInterface {
 ### Procedural programming
 #### Does the language support procedural programming?
 ##### Kotlin
-
+Kotlin supports procedural programming. So, functions and variables can be defined without placing them explicitly in classes. 
 ##### Go
 
 
 ### Functional programming
 #### Does the language support functional programming?
 ##### Kotlin
-
+Kotlin supports functional programming. It allows for the use of both OO and FP styles, or mixed elements of the two. The FP styles include, but are not limited too, higher-order functions, function types, and lambdas.
 ##### Go
 
     
