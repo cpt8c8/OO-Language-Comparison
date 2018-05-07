@@ -63,7 +63,7 @@ func main() {
 ### Name spaces
 #### How are name spaces implemented? 
 ##### Kotlin
-Kotlin follows Java's naming conventions. 
+Kotlin follows Java's naming conventions. Names of packages are always lower case and do not use underscores, names of classes and objects start with an upper case letter and use camel humps, names of functions, properties and local variables start with a lower case letter and use camel humps and no underscores (with the exception of factory functions used to create instances of classes, which can have the same name as the class being created), and names for tests (and only tests) can have method names with spaces enclosed in backticks. The naming conventions for properties are as follows: names of constants should use uppercase underscore-separated names, names of top-level or object properties which hold objects with behavior or mutable data should use regular camel-hump names, names of properties holding references to singleton objects can use the same naming style as object declarations, and for enum constants, it's OK to use either uppercase underscore-separated names (enum class Color { RED, GREEN }) or regular camel-humps names starting with an uppercase letter, depending on the usage.
 ##### Go
 
 #### How are name spaces used?
@@ -237,17 +237,31 @@ So, the get() and set() of the property "ex" are delegated to the getValue() and
 ### Interfaces / protocols
 #### What does the language support?
 ##### Kotlin
-
+Kotlin does support interfaces, and they are implemented very similarly to Java 8. A class can implement many interfaces.
 ##### Go
 
 #### What abilities does it have?
 ##### Kotlin
-
+Kotlin interfaces can contain declarations of abstract methods and method implementations. However, they cannot store state. They can have properties as long as they are abstract or provide accessor implementations.
 ##### Go
 
 #### How is it used?
 ##### Kotlin
+Interfaces in Kotlin are implemented as shown.
+```kotlin
+interface ExampleInterface {
+    fun foo()
+    fun bar() {
+      // body if desired
+    }
+}
 
+class Child : ExampleInterface {
+    override fun foo() {
+        // body
+    }
+}
+```
 ##### Go
 
 ### Inheritance / extension
