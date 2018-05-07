@@ -307,12 +307,25 @@ As a final note, all classes in Kotlin have a common superclass "Any", that is t
 ### Reflection
 #### What reflection abilities are supported?
 ##### Kotlin
-
+Kotlin allows for the use of reflection to see what type, class, properties, and functions an object possesses. It also allows for the referencing of constructors.
 ##### Go
 
 #### How is reflection used?
 ##### Kotlin
+Below are a few examples of Kotlin's reflection syntax:
+```kotlin
+val c = Example::class //here we are grabbing the class of Example
 
+fun isOdd(x: Int) = x % 2 != 0 //here reflection is used to grab reference to a function
+val numbers = listOf(1, 2, 3)
+println(numbers.filter(::isOdd))
+
+val x = 1 //here we use reflection to get the property x
+fun main(args: Array<String>) {
+    println(::x.get())
+    println(::x.name) 
+}
+```
 ##### Go
 
     
