@@ -68,7 +68,11 @@ Kotlin follows Java's naming conventions. Names of packages are always lower cas
 
 #### How are name spaces used?
 ##### Kotlin
-
+Kotlin's namespaces are implemented very similarly to Java. The package is described at the top of the document with imports (typically) below it, as such.
+```kotlin
+package foo.bar
+import foo.*
+```
 ##### Go
 
     
@@ -187,7 +191,7 @@ class Example {
     //}
 }
 ```
-You can also have custom setterans and getters if you would like.
+You can also have custom setters and getters if you would like.
 ```kotlin
 class Example(exOne: Int, exTwo: String, exThree: Int) {
     val exampleOne: Int = exOne
@@ -332,41 +336,47 @@ fun main(args: Array<String>) {
 ### Memory management
 #### How is it handled?
 ##### Kotlin
-
+With Kotlin (much like Java), all objects are placed onto a heap divided into two spaces. Once full, garbage collection scans through the heap.
 ##### Go
 
 #### How does it work?
 ##### Kotlin
-
+The first of said spaces is the nursery, which holds younger objects and causes garbage collection to run once full. If an object is "old" enough it will be moved into the second space, i.e. the old space, by the garbage collector instead of being destroyed. If the old space hits capacity the garbage collector will run on it, destroying objects that are not being used.
 ##### Go
 
 #### Garbage collection?
 ##### Kotlin
-
+As mentioned above, Kotlin does take advantage of garbage collection.
 ##### Go
 
 #### Automatic reference counting?
 ##### Kotlin
-
+Kotlin does not have automatic reference counting. Its use of garbage collection makes such a feature unneeded. 
 ##### Go
 
    
 ### Comparisons of references and values
 #### How are values compared? (i.e. comparing two strings)
 ##### Kotlin
-
+Kotlin uses == and != for comparison. They reference structual integrity, with == being functionally equivilent to Java's .equals() method. So, it works for strings as well.
+```kotlin
+    x == y
+    // is equivalent to
+    x?.equals(y) ?: (y === null)
+```
+As for referential equality, Kotlin uses === and !== to check if references are pointing to the same object. 
 ##### Go
 
     
 ### Null/nil references
 #### Which does the language use? (null/nil/etc)
 ##### Kotlin
-
+Kotlin uses "null" for empty objects and null pointers. 
 ##### Go
 
 #### Does the language have features for handling null/nil references?
 ##### Kotlin
-
+Many of Kotlin's features were created with prevnting danger that could occur from null references in mind. This includes the fact that both variables and collections can be "nullable" by placing a ? after the type. This means they are allowed to hold null values. If a non-nullable variable is set to null, it will cause a compilation error. In addition, Kotlin has "Null Safety" as mentioned in the Unique Features section. As a last note, Kotlin has access to the NullPointerException for error handling in regard to null values.
 ##### Go
 
     
