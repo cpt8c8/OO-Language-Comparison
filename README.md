@@ -94,9 +94,11 @@ New concrete types can certainly be created through structs, but there isn’t s
 ### Classes
 #### Defining
 ##### Kotlin
-In Kotlin this is done through Data Classes. Refer to the code below for a proper definition.
+Classes are easily defined in Kotlin, as show below.
 ```kotlin
-data class User(val name: String, val age: Int)
+class Example {
+    // ...
+}
 ```
 ##### Go
 The syntax for creating structs in go is similar to C. Refer to the code below for proper struct definition.
@@ -108,48 +110,127 @@ type person struct {
 ```
 #### Creating new instances
 ##### Kotlin
-A instance of a Data Class can be created as shown below.
+A instance of a Class can be created as shown below.
 ```kotlin
-data class Person(val name: String) {
-    var age: Int = 0
-}//here the datan class is defined
-
-val person1 = Person("John")
-//here an instance is created
+val ex = Example()
+//or
+val exXx = ExXxample("Like that Vin Diesal movie")
 ```
 ##### Go
 
 #### Constructing/initializing
 ##### Kotlin
-
+Kotlin allows for both a primary constructor and mutiple secondary contructors. A primary constructor is placed in the class header as shown.
+```kotlin
+class Example constructor(exOne: String) {
+}
+```
+However, the primary constructor cannot contain code. 
+Secondary constructors are declared as show. 
+```kotlin
+class Example {
+    constructor(parent: Example) {
+        parent.children.add(this)
+    }
+}
+```
+All secondary constructors must delegate to the primary constructor (if it exists) using "this". 
+```kotlin
+class Example(val exOne: String) {
+    constructor(exTwo: String, parent: Example) : this(name) {
+        parent.children.add(this)
+    }
+}
+```
 ##### Go
 
 #### Destructing/de-initializing
 ##### Kotlin
-
+Objects in Kotlin can be destructured into multiple values.
+```kotlin
+val (variableOne, variableTwo) = example 
+```
+This leaves us with two newly declared variables.
 ##### Go
 
 #### Instance reference name in data type (class)
-        this? self?
 ##### Kotlin
-
+In Kotlin this is done through secondary constructors, as discussed above. It is also shown below again.
+```kotlin
+class Example(val exOne: String) {
+    constructor(exTwo: String, parent: Example) : this(name) {
+        parent.children.add(this)
+    }
+}
+```
 ##### Go
 
-    
 ### Properties
 #### Getters and setters…write your own or built in?
 ##### Kotlin
+Getters and setters are built in for Kotlin and are used as shown.
+```kotlin
+fun main(args: Array<String>) {
+    val ex = Example()
+    ex.exValue = "New Value"
+    println("${ex.exValue}")
+}
 
+class Example {
+    var exValue: String = "defaultValue"
+    
+    //the following are not required
+    //get() = field
+
+    //set(value) {
+        //field = value
+    //}
+}
+```
+You can also have custom setterans and getters if you would like.
+```kotlin
+class Example(exOne: Int, exTwo: String, exThree: Int) {
+    val exampleOne: Int = exOne
+
+    var exampleTwo: String = exTwo 
+        // Custom Getter
+        get() {     
+            return field.toUpperCase(
+        }     
+
+    var examplethree: Int = exThree
+        // Custom Setter
+        set(value) {
+            field = if(value =! 0) value else throw IllegalArgumentException("exThree must be zero")
+        }
+}
+```
 ##### Go
 
 #### Backing variables?
 ##### Kotlin
-
+In Kotlin you have backing fields, which help you refer to the property inside the getter and setter methods. You must use them becuase using the property directly inside the getter or setter causes a recursive call which will generate a StackOverflowError. The Kotlin code in the getters and setters example has these in use (the fields have been named "field" for ease of identification). 
 ##### Go
 
 #### Computed properties?
 ##### Kotlin
+Kotlin allows for the use of delegated properties, with a syntax as show,
+```kotlin
+class Example {
+    var ex: String by Delegate()
+}
 
+class Delegate {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): String {
+        return "$thisRef, thank you for delegating '${property.name}' to me!"
+    }
+ 
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) {
+        println("$value has been assigned to '${property.name}' in $thisRef.")
+    }
+}
+```
+So, the get() and set() of the property "ex" are delegated to the getValue() and setValue() methods of the "Delegate()" class. Kotlin's standard library contains a few very helpful standard delegates such as Lazy() (for if the value gets computed only upon first access) and Delegates.observable() (listeners that get notified about changes to this property). 
 ##### Go
 
     
@@ -165,6 +246,9 @@ val person1 = Person("John")
 ##### Go
 
 #### How is it used?
+##### Kotlin
+
+##### Go
 
 ### Inheritance / extension
 #### Kotlin
