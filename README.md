@@ -41,7 +41,7 @@ example(str = "Name", num = 45) //Named argument
 example(45) //usage of default argument
 ```
 ##### Python
-The truly unique thing about python is its simplicity, syntax is unobtrustive. Available libraries are also exaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets do the exact same thing but the python code looks much cleaner
+The truly unique thing about python is its simplicity, syntax is unobtrustive. Available libraries are also exaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets do the exact same thing.
 ###### Python
 ```python
 data = Series(['A','B','C','D','E','F'], index = [0,2,5,7,12,14])
