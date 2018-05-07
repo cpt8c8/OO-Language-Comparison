@@ -63,7 +63,7 @@ func main() {
 ### Name spaces
 #### How are name spaces implemented? 
 ##### Kotlin
-
+Kotlin follows Java's naming conventions. 
 ##### Go
 
 #### How are name spaces used?
