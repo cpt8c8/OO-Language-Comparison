@@ -41,7 +41,7 @@ example(str = "Name", num = 45) //Named argument
 example(45) //usage of default argument
 ```
 ##### Python
-The truly unique thing about python is its simplicity, syntax is unobtrustive. Available libraries are also exaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets do the exact same thing.
+The truly unique thing about python is its simplicity, syntax is unobtrustive. Available libraries are also exaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets have the same logical input and output.
 ###### Python
 ```python
 data = Series(['A','B','C','D','E','F'], index = [0,2,5,7,12,14])
@@ -50,18 +50,18 @@ data.reindex(range(14),method='ffill')
 ###### C
 ```c
 char array1[6][2] = {{'A','0'},{'B','2'},{'C','5'},{'D','7'},{'E','12'},{'F','14'}};
-char array2[14];
+char data[14];
 int hold = 0;
 int arrayidx = 0;
 
 for(int i = 0; i < 14; i++){
 	if(atoi(array1[arrayidx][1]) == i){
-		array2[i] = array1[arrayidx][0];
+		data[i] = array1[arrayidx][0];
 		hold = array1[arrayidx][0];
 		arrayidx++;
 	}
 	else{
-		array2[i] = hold;
+		data[i] = hold;
 	}
 }
 ```
