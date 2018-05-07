@@ -11,7 +11,7 @@ Go was designed by engineers at google with the purpose of creating a language t
 
 #### What problems was the language trying to address?
 ##### Kotlin
-JetBrains was looking for a language that adresses their needs, had fast compile times, was streamlined, and could ineract with a replace Java.
+JetBrains was looking for a language that adresses their needs, had fast compile times, was streamlined, and could ineract with and replace Java.
 ##### Go
 Some specific goals for Go were creating a language that supported static typing and was easily scalable like Java, didn't require a lot of boilerplate like Ruby or Python, and - what I see as the most powerful aspect of go - had good support for networking and multiprocessing.
 
@@ -376,7 +376,11 @@ Kotlin uses "null" for empty objects and null pointers.
 
 #### Does the language have features for handling null/nil references?
 ##### Kotlin
-Many of Kotlin's features were created with prevnting danger that could occur from null references in mind. This includes the fact that both variables and collections can be "nullable" by placing a ? after the type. This means they are allowed to hold null values. If a non-nullable variable is set to null, it will cause a compilation error. In addition, Kotlin has "Null Safety" as mentioned in the Unique Features section. As a last note, Kotlin has access to the NullPointerException for error handling in regard to null values.
+Many of Kotlin's features were created with prevnting danger that could occur from null references in mind. This includes the fact that both variables and collections can be "nullable" by placing a ? after the type. This means they are allowed to hold null values. If a non-nullable variable is set to null, it will cause a compilation error. In addition, Kotlin has "Null Safety" as mentioned in the Unique Features section. To reiterate, by using its simple ? operator, it first checks the value to see if it is null or not. If it’s not null then only then it will perform the next operation. It is used as shown. 
+```kotlin
+val str:String? = "name"
+``` 
+As a last note, Kotlin has access to the NullPointerException for error handling in regard to null values.
 ##### Go
 
     
