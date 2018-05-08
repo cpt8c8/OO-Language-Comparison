@@ -238,6 +238,7 @@ class Example(exOne: Int, exTwo: String, exThree: Int) {
 }
 ```
 ##### Python
+Getters and setters must be built by the user, they are not inherent to python classes/
 
 #### Backing variables?
 ##### Kotlin
@@ -444,6 +445,11 @@ val example = { x: Int, y: Int -> x + y }
 //x, y = arguments passed to function
 ```
 ##### Python
+Lambda functions are fairly simple to implement in python, keeping in line with its functional programming roots.
+```python
+    f = lambda x, y : x + y
+	f(1,1)
+```
 
     
 ### Implementation of listeners and event handlers
@@ -454,7 +460,7 @@ fun setOnClickListener(listener: (View) -> Unit)
 button.setOnClickListener({ view -> doSomething() })
 ```
 ##### Python
-
+Python doesnt support prebuilt event listeners, but there is a python Event class which can be used to signal events across threads with the setting and unsetting of flags, so checking for events has to be a somewhat manual process, where flag checks are done only when requested.
     
 ### Singleton
 #### How is a singleton implemented?
@@ -468,16 +474,35 @@ object Singleton {
 }
 ```
 ##### Python
+Singletons are not commonly used in python, perhaps because they are cumbersome to implement, here's a code example of how one can be implemented.
+```python
+    class Singleton:
+    __instance = None
+
+    @staticmethod
+    def getInstance():
+        if Singleton.__instance == None:
+            Singleton()
+        return Singleton.__instance 
+
+    def __init__(self):
+        if Singleton.__instance != None:
+            raise Exception("This class is a singleton!")
+        else:
+            Singleton.__instance = self
+```
 
 #### Can it be made thread-safe?
 ##### Kotlin
 Singletons can be made thread safe in Kotlin.
 ##### Python
+Yes, singletons can be made thread safe in python.
 
 #### Can the singleton instance be lazily instantiated?
 ##### Kotlin
 In Kotlin, singletons can be lazily instantiated after it is first accessed. 
 ##### Python
+Yes, lazy instatiation is possible for with python singletons.
 
     
 ### Procedural programming
