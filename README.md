@@ -71,7 +71,7 @@ for(int i = 0; i < 14; i++){
 ##### Kotlin
 Kotlin follows Java's naming conventions. Names of packages are always lower case and do not use underscores, names of classes and objects start with an upper case letter and use camel humps, names of functions, properties and local variables start with a lower case letter and use camel humps and no underscores (with the exception of factory functions used to create instances of classes, which can have the same name as the class being created), and names for tests (and only tests) can have method names with spaces enclosed in backticks. The naming conventions for properties are as follows: names of constants should use uppercase underscore-separated names, names of top-level or object properties which hold objects with behavior or mutable data should use regular camel-hump names, names of properties holding references to singleton objects can use the same naming style as object declarations, and for enum constants, it's OK to use either uppercase underscore-separated names (enum class Color { RED, GREEN }) or regular camel-humps names starting with an uppercase letter, depending on the usage.
 ##### Python
-
+Namespaces are implemented in python as dictionaries, with names being dictionary keys that map to their represented objects. Some namepaces in python include the global scope of a python module(package), the local scope of a method or function, and built in names like standard functions; abs(), cmp(), ...
 #### How are name spaces used?
 ##### Kotlin
 Kotlin's namespaces are implemented very similarly to Java. The package is described at the top of the document with imports (typically) below it, as such.
@@ -80,7 +80,11 @@ package foo.bar
 import foo.*
 ```
 ##### Python
-
+namespaces can be created by declaring package names that can then be pulled in using "import" keyword. Subpackages can also be imported without taking the whole package, any functions that are called must be referenced from the subpackage name unless the "as" keyword is used, which allows you to cast a package object to a different name.
+```python
+from fibo import fib as fibonacci
+fibonacci(500)
+```
     
 ### Types
 #### What types does the language support?
