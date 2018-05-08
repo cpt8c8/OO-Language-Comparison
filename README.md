@@ -159,7 +159,14 @@ class Example(val exOne: String) {
 }
 ```
 ##### Python
-Contstructors are not supported in python.
+Contstructors can be declared in a class by defining a method called "__init__()" within the class scope.
+```python
+class Point(object):
+    def __init__(self,x = 0,y = 0):
+        self.x = x
+        self.y = y
+```
+
 
 #### Destructing/de-initializing
 ##### Kotlin
@@ -182,7 +189,13 @@ class Example(val exOne: String) {
 }
 ```
 ##### Python
-
+Python uses the "self" keyword to make reference to the containing object, see code example below for how it may be used in a constructor.
+```python
+class Point(object):
+    def __init__(self,x = 0,y = 0):
+        self.x = x
+        self.y = y
+```
 
 ### Properties
 #### Getters and setters…write your own or built in?
