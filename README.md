@@ -91,17 +91,18 @@ fibonacci(500)
 ##### Kotlin
 Kotlin can represent numbers through the types Byte, Short, Int, Long, Float, and Double. It also supports Char, String, and Boolean. 
 ##### Python
+Python supports int, float and complex num types, list, tuple and range sequence types, a string type, a mapping type(dict), binary types and others.
 
 #### Are both reference and value types supported?
 ##### Kotlin
 Kotlin supports both reference and value tyoes.
 ##### Python
-
+Yes, but in an unusual way, all variables in python are essentially reference types, but they can behave like either a reference or a value type. 
 #### Can new value types be created?
 ##### Kotlin
 Kotlin does not facilitate the creation of basic types.
 ##### Python
-   
+Yes, creating new value types is supported in python.
 ### Classes
 #### Defining
 ##### Kotlin
@@ -112,6 +113,12 @@ class Example {
 }
 ```
 ##### Python
+Classes are very simple to define in python, refer to the code below for syntax.
+```python
+class MyClass:
+    a = 1
+    b = "Hello"
+```
 
 #### Creating new instances
 ##### Kotlin
@@ -122,6 +129,10 @@ val ex = Example()
 val exXx = ExXxample("Like that Vin Diesal movie")
 ```
 ##### Python
+A instance of a python Class can be created as shown below.
+```python
+classVariable = MyClass()
+```
 
 #### Constructing/initializing
 ##### Kotlin
@@ -148,6 +159,7 @@ class Example(val exOne: String) {
 }
 ```
 ##### Python
+Contstructors are not supported in python.
 
 #### Destructing/de-initializing
 ##### Kotlin
@@ -157,6 +169,7 @@ val (variableOne, variableTwo) = example
 ```
 This leaves us with two newly declared variables.
 ##### Python
+Certain objects such as dictionaries can be destructured, but there is not an elegant way to destrcture custom objects.
 
 #### Instance reference name in data type (class)
 ##### Kotlin
@@ -169,6 +182,7 @@ class Example(val exOne: String) {
 }
 ```
 ##### Python
+
 
 ### Properties
 #### Getters and setters…write your own or built in?
@@ -458,6 +472,7 @@ In Kotlin, singletons can be lazily instantiated after it is first accessed.
 ##### Kotlin
 Kotlin supports procedural programming. So, functions and variables can be defined without placing them explicitly in classes. 
 ##### Python
+Python supports procedural programming concepts.
 
 
 ### Functional programming
@@ -465,13 +480,14 @@ Kotlin supports procedural programming. So, functions and variables can be defin
 ##### Kotlin
 Kotlin supports functional programming. It allows for the use of both OO and FP styles, or mixed elements of the two. The FP styles include, but are not limited too, higher-order functions, function types, and lambdas.
 ##### Python
-
+Python supports functional programming concepts, and includes some standard functions common to functional programming(filter(), map(), reduce())
     
 ### Multithreading
 #### Threads or thread-like abilities
 ##### Kotlin
 Kotlin supports the use of both threads and coroutines.
 ##### Python
+Python supports threading and coroutines.
 
 #### How is multitasking accomplished?
 ##### Kotlin
@@ -491,5 +507,9 @@ In Kotlin, you can create threads either by extending the Thread class or implem
 Either way, the thread must be started by calling start() in main. 
 I also mentioned that Kotlin supports coroutines. That is actually only partially true, as currently coroutines are only experimental in Kotlin. A coroutine is a computation that can be suspended without blocking a thread. Blocking threads is fairly expensive, so coroutines exist as a method that is less expensive to suspend. That being said, coroutines are only suspendable at specific points. For a coroutine to be blocked, a suspend call must be declared with "suspend" before "fun".
 ##### Python
+Creating new threads in Python is fairly simple. All you have to do is write the function you'd like to thread, and pass it to the start_new_thread() function of the thread library, along with any optional arguments contained in a tuple.
+```python
+    thread.start_new_thread(function(), args)
+```
 
 
