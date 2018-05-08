@@ -448,7 +448,7 @@ val example = { x: Int, y: Int -> x + y }
 Lambda functions are fairly simple to implement in python, keeping in line with its functional programming roots.
 ```python
     f = lambda x, y : x + y
-	f(1,1)
+    f(1,1)
 ```
 
     
