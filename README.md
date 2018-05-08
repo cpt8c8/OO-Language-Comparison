@@ -272,11 +272,13 @@ So, the get() and set() of the property "ex" are delegated to the getValue() and
 ##### Kotlin
 Kotlin does support interfaces, and they are implemented very similarly to Java 8. A class can implement many interfaces.
 ##### Python
+Python supports interfaces, and their implementation is very similar to java.
 
 #### What abilities does it have?
 ##### Kotlin
 Kotlin interfaces can contain declarations of abstract methods and method implementations. However, they cannot store state. They can have properties as long as they are abstract or provide accessor implementations.
 ##### Python
+Interfaces can declare abstract methods but cannot store information or declare attributes.
 
 #### How is it used?
 ##### Kotlin
@@ -296,22 +298,22 @@ class Child : ExampleInterface {
 }
 ```
 ##### Python
-Python supports both singular and multiple inheritence, below is a code example.
+Below is an example implementation of a python interface.
 ```python
-class Person:
+class IInterface(object):
+    def __init__(self):
+        pass
 
-    def __init__(self, first, last):
-        self.firstname = first
-        self.lastname = last
+    def show(self):
+        raise Exception("NotImplementedException")
 
-    def __str__(self):
-        return self.firstname + " " + self.lastname
 
-class Employee(Person):
+class MyClass(IInterface):
+   def __init__(self):
+       IInterface.__init__(self)
 
-    def __init__(self, first, last, staffnum):
-        super().__init__(first, last)
-        self.staffnumber = staffnum
+   def show(self):
+       print 'Hello World!'
 ```
 
 ### Inheritance / extension
@@ -352,7 +354,23 @@ class Sub : Super() {
 ```
 As a final note, all classes in Kotlin have a common superclass "Any", that is the default superclass for a class with no supertypes declared.
 #### Python
+Python supports both singular and multiple inheritence, below is a code example.
+```python
+class Person:
 
+    def __init__(self, first, last):
+        self.firstname = first
+        self.lastname = last
+
+    def __str__(self):
+        return self.firstname + " " + self.lastname
+
+class Employee(Person):
+
+    def __init__(self, first, last, staffnum):
+        super().__init__(first, last)
+        self.staffnumber = staffnum
+```
     
 ### Reflection
 #### What reflection abilities are supported?
