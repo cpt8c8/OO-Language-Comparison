@@ -159,7 +159,7 @@ class Example(val exOne: String) {
 }
 ```
 ##### Python
-Contstructors can be declared in a class by defining a method called "__init__()" within the class scope.
+Contstructors can be declared in a class by defining a method called "\_\_init\_\_()" within the class scope.
 ```python
 class Point(object):
     def __init__(self,x = 0,y = 0):
