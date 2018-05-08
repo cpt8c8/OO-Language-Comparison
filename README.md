@@ -5,13 +5,13 @@
 ### Language purpose/genesis
 #### Why was the language created?
 ##### Kotlin
-Kotlin was developed by JetBrains primarily for internal use. It was intended to boost productivty and improve workflow, which would result in improved sales.
+Kotlin was developed by JetBrains primarily for internal use. It was intended to boost productivity and improve workflow, which would result in improved sales.
 ##### Python
 Python was created as a pet project by Guido van Rossum, originally intended to be a scripting language that took ideas from an earlier general purpose called ABC.
 
 #### What problems was the language trying to address?
 ##### Kotlin
-JetBrains was looking for a language that adresses their needs, had fast compile times, was streamlined, and could ineract with and replace Java.
+JetBrains was looking for a language that addressed their needs, had fast compile times, was streamlined, and could interact with and replace Java.
 ##### Python
 Python was created with the goals of being extremely readable and high level, and being very extensible, allowing it to have lots of inherent multi-paradigm support and making it easy to add even more programming paradigms beyond what is included in the vanilla distribution.
 
@@ -41,7 +41,7 @@ example(str = "Name", num = 45) //Named argument
 example(45) //usage of default argument
 ```
 ##### Python
-The truly unique thing about python is its simplicity, syntax is unobtrustive. Available libraries are also exaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets have the same logical input and output.
+The truly unique thing about python is its simplicity, syntax is unobtrusive. Available libraries are also exhaustive in their coverage of many basic and more complex. These two characteristics mean that you can accomplish a lot with fewer characters and lines of code than previous languages. Below is in example of this, note that these two code snippets have the same logical input and output.
 ###### Python
 ```python
 data = Series(['A','B','C','D','E','F'], index = [0,2,5,7,12,14])
@@ -71,7 +71,7 @@ for(int i = 0; i < 14; i++){
 ##### Kotlin
 Kotlin follows Java's naming conventions. Names of packages are always lower case and do not use underscores, names of classes and objects start with an upper case letter and use camel humps, names of functions, properties and local variables start with a lower case letter and use camel humps and no underscores (with the exception of factory functions used to create instances of classes, which can have the same name as the class being created), and names for tests (and only tests) can have method names with spaces enclosed in backticks. The naming conventions for properties are as follows: names of constants should use uppercase underscore-separated names, names of top-level or object properties which hold objects with behavior or mutable data should use regular camel-hump names, names of properties holding references to singleton objects can use the same naming style as object declarations, and for enum constants, it's OK to use either uppercase underscore-separated names (enum class Color { RED, GREEN }) or regular camel-humps names starting with an uppercase letter, depending on the usage.
 ##### Python
-Namespaces are implemented in python as dictionaries, with names being dictionary keys that map to their represented objects. Some namepaces in python include the global scope of a python module(package), the local scope of a method or function, and built in names like standard functions; abs(), cmp(), ...
+Namespaces are implemented in python as dictionaries, with names being dictionary keys that map to their represented objects. Some namespaces in python include the global scope of a python module(package), the local scope of a method or function, and built in names like standard functions; abs(), cmp(), ...
 #### How are name spaces used?
 ##### Kotlin
 Kotlin's namespaces are implemented very similarly to Java. The package is described at the top of the document with imports (typically) below it, as such.
@@ -95,7 +95,7 @@ Python supports int, float and complex num types, list, tuple and range sequence
 
 #### Are both reference and value types supported?
 ##### Kotlin
-Kotlin supports both reference and value tyoes.
+Kotlin supports both reference and value types.
 ##### Python
 Yes, but in an unusual way, all variables in python are essentially reference types, but they can behave like either a reference or a value type. 
 #### Can new value types be created?
@@ -136,7 +136,7 @@ classVariable = MyClass()
 
 #### Constructing/initializing
 ##### Kotlin
-Kotlin allows for both a primary constructor and mutiple secondary contructors. A primary constructor is placed in the class header as shown.
+Kotlin allows for both a primary constructor and multiple secondary constructors. A primary constructor is placed in the class header as shown.
 ```kotlin
 class Example constructor(exOne: String) {
 }
@@ -159,7 +159,7 @@ class Example(val exOne: String) {
 }
 ```
 ##### Python
-Contstructors can be declared in a class by defining a method called "\_\_init\_\_()" within the class scope.
+Constructors can be declared in a class by defining a method called "\_\_init\_\_()" within the class scope.
 ```python
 class Point(object):
     def __init__(self,x = 0,y = 0):
@@ -176,7 +176,7 @@ val (variableOne, variableTwo) = example
 ```
 This leaves us with two newly declared variables.
 ##### Python
-Certain objects such as dictionaries can be destructured, but there is not an elegant way to destrcture custom objects.
+Certain objects such as dictionaries can be destructured, but there is not an elegant way to destructure custom objects.
 
 #### Instance reference name in data type (class)
 ##### Kotlin
@@ -242,9 +242,9 @@ Getters and setters must be built by the user, they are not inherent to python c
 
 #### Backing variables?
 ##### Kotlin
-In Kotlin you have backing fields, which help you refer to the property inside the getter and setter methods. You must use them becuase using the property directly inside the getter or setter causes a recursive call which will generate a StackOverflowError. The Kotlin code in the getters and setters example has these in use (the fields have been named "field" for ease of identification). 
+In Kotlin you have backing fields, which help you refer to the property inside the getter and setter methods. You must use them because using the property directly inside the getter or setter causes a recursive call which will generate a StackOverflowError. The Kotlin code in the getters and setters example has these in use (the fields have been named "field" for ease of identification). 
 ##### Python
-In python, backing variables are usually denoted by an underscore preceding the variable name(\_varibalename)
+In python, backing variables are usually denoted by an underscore preceding the variable name(\_variablename)
 
 #### Computed properties?
 ##### Kotlin
@@ -355,7 +355,7 @@ class Sub : Super() {
 ```
 As a final note, all classes in Kotlin have a common superclass "Any", that is the default superclass for a class with no supertypes declared.
 #### Python
-Python supports both singular and multiple inheritence, below is a code example.
+Python supports both singular and multiple inheritance, below is a code example.
 ```python
 class Person:
 
@@ -433,7 +433,7 @@ Yes, python implements reference counting features.
 ### Comparisons of references and values
 #### How are values compared? (i.e. comparing two strings)
 ##### Kotlin
-Kotlin uses == and != for comparison. They reference structual integrity, with == being functionally equivilent to Java's .equals() method. So, it works for strings as well.
+Kotlin uses == and != for comparison. They reference structural integrity, with == being functionally equivalent to Java's .equals() method. So, it works for strings as well.
 ```kotlin
     x == y
     // is equivalent to
@@ -452,7 +452,7 @@ In python, the null equivalent is the "None" singleton, which denotes an empty o
 
 #### Does the language have features for handling null/nil references?
 ##### Kotlin
-Many of Kotlin's features were created with prevnting danger that could occur from null references in mind. This includes the fact that both variables and collections can be "nullable" by placing a ? after the type. This means they are allowed to hold null values. If a non-nullable variable is set to null, it will cause a compilation error. In addition, Kotlin has "Null Safety" as mentioned in the Unique Features section. To reiterate, by using its simple ? operator, it first checks the value to see if it is null or not. If it’s not null then only then it will perform the next operation. It is used as shown. 
+Many of Kotlin's features were created with preventing danger that could occur from null references in mind. This includes the fact that both variables and collections can be "nullable" by placing a ? after the type. This means they are allowed to hold null values. If a non-nullable variable is set to null, it will cause a compilation error. In addition, Kotlin has "Null Safety" as mentioned in the Unique Features section. To reiterate, by using its simple ? operator, it first checks the value to see if it is null or not. If it’s not null then only then it will perform the next operation. It is used as shown. 
 ```kotlin
 val str:String? = "name"
 ``` 
@@ -513,13 +513,13 @@ Lambda functions are fairly simple to implement in python, keeping in line with 
     
 ### Implementation of listeners and event handlers
 ##### Kotlin
-Kotlin has a very streamlined implemtation of listeners and event handlers. Its ability to use lambda expressions and pass them as arguments helps to make the listener/handler statements very concise. 
+Kotlin has a very streamlined implementation of listeners and event handlers. Its ability to use lambda expressions and pass them as arguments helps to make the listener/handler statements very concise. 
 ```kotlin
 fun setOnClickListener(listener: (View) -> Unit)
 button.setOnClickListener({ view -> doSomething() })
 ```
 ##### Python
-Python doesnt support prebuilt event listeners, but there is a python Event class which can be used to signal events across threads with the setting and unsetting of flags, so checking for events has to be a somewhat manual process, where flag checks are done only when requested.
+Python doesn't support prebuilt event listeners, but there is a python Event class which can be used to signal events across threads with the setting and unsetting of flags, so checking for events has to be a somewhat manual process, where flag checks are done only when requested.
     
 ### Singleton
 #### How is a singleton implemented?
@@ -561,7 +561,7 @@ Yes, singletons can be made thread safe in python.
 ##### Kotlin
 In Kotlin, singletons can be lazily instantiated after it is first accessed. 
 ##### Python
-Yes, lazy instatiation is possible for with python singletons.
+Yes, lazy instantiation is possible for with python singletons.
 
     
 ### Procedural programming
@@ -602,7 +602,7 @@ In Kotlin, you can create threads either by extending the Thread class or implem
     }
 ```
 Either way, the thread must be started by calling start() in main. 
-I also mentioned that Kotlin supports coroutines. That is actually only partially true, as currently coroutines are only experimental in Kotlin. A coroutine is a computation that can be suspended without blocking a thread. Blocking threads is fairly expensive, so coroutines exist as a method that is less expensive to suspend. That being said, coroutines are only suspendable at specific points. For a coroutine to be blocked, a suspend call must be declared with "suspend" before "fun".
+I also mentioned that Kotlin supports coroutines. That is actually only partially true, as currently coroutines are only experimental in Kotlin. A coroutine is a computation that can be suspended without blocking a thread. Blocking threads is fairly expensive, so coroutines exist as a method that is less expensive to suspend. That being said, coroutines are only suspendible at specific points. For a coroutine to be blocked, a suspend call must be declared with "suspend" before "fun".
 ##### Python
 Creating new threads in Python is fairly simple. All you have to do is write the function you'd like to thread, and pass it to the start_new_thread() function of the thread library, along with any optional arguments contained in a tuple.
 ```python
