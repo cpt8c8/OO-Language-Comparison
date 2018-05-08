@@ -424,7 +424,7 @@ In Kotlin, exceptions can be thrown with the 'throw' keyword and uses try and ca
         //...
     }
 ```
-Kotlin, more uniquely, also allows try functions to return values. In addition, is has the "Nothing" keyword, which labels code as "a value that never exists." This meaning that the function will never return anything, only throw exceptions. 
+Kotlin, more uniquely, also allows try functions to return values. In addition, is has the "Nothing" keyword, which labels code as "a value that never exists." This meaning that the function will never return anything, only throw exceptions.
 ```kotlin
  fun woops(except: String): Nothing {
         throw IllegalArgumentException(except)
@@ -434,8 +434,15 @@ Kotlin, more uniquely, also allows try functions to return values. In addition, 
     println(x)
 ```
 ##### Python
-
-    
+The implementation of exception handling in python is pretty simple, first you declare a try statement, and for failures you can declare one or more except cases to give you more detailed info on the type of exception.
+```python
+    try:
+    	x = int(input("Please enter a number: "))
+    	break
+    except ValueError:
+    	print("Oops!  That was no valid number.  Try again...")
+```
+ 
 ### Lambda expressions, closures, or functions as types
 ##### Kotlin
 Kotlin denotes its functions as "First Class", meaning that they can be stored in variables and data structures. In addition, they can be passed to or returned from higher order functions. On top of that, Kotlin has lambda expressions. The syntax is as shown,
