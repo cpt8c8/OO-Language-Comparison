@@ -296,6 +296,23 @@ class Child : ExampleInterface {
 }
 ```
 ##### Python
+Python supports both singular and multiple inheritence, below is a code example.
+```python
+class Person:
+
+    def __init__(self, first, last):
+        self.firstname = first
+        self.lastname = last
+
+    def __str__(self):
+        return self.firstname + " " + self.lastname
+
+class Employee(Person):
+
+    def __init__(self, first, last, staffnum):
+        super().__init__(first, last)
+        self.staffnumber = staffnum
+```
 
 ### Inheritance / extension
 #### Kotlin
@@ -342,6 +359,7 @@ As a final note, all classes in Kotlin have a common superclass "Any", that is t
 ##### Kotlin
 Kotlin allows for the use of reflection to see what type, class, properties, and functions an object possesses. It also allows for the referencing of constructors.
 ##### Python
+Python provides the ability to examine the type and attributes of objects with simple library functions.
 
 #### How is reflection used?
 ##### Kotlin
@@ -360,6 +378,11 @@ fun main(args: Array<String>) {
 }
 ```
 ##### Python
+Below is an example of how you can retrieve the type of an object.
+```python
+	type(3) is int #returns true
+
+```
 
     
 ### Memory management
@@ -367,6 +390,7 @@ fun main(args: Array<String>) {
 ##### Kotlin
 With Kotlin (much like Java), all objects are placed onto a heap divided into two spaces. Once full, garbage collection scans through the heap.
 ##### Python
+Python has automatic memory management which utilizes dynamic typing and a combination of reference counting and cycle-detecting garbage collection.
 
 #### How does it work?
 ##### Kotlin
@@ -377,11 +401,13 @@ The first of said spaces is the nursery, which holds younger objects and causes 
 ##### Kotlin
 As mentioned above, Kotlin does take advantage of garbage collection.
 ##### Python
+Yes, python implements garbage collection features.
 
 #### Automatic reference counting?
 ##### Kotlin
 Kotlin does not have automatic reference counting. Its use of garbage collection makes such a feature unneeded. 
 ##### Python
+Yes, python implements reference counting features.
 
    
 ### Comparisons of references and values
@@ -395,13 +421,14 @@ Kotlin uses == and != for comparison. They reference structual integrity, with =
 ```
 As for referential equality, Kotlin uses === and !== to check if references are pointing to the same object. 
 ##### Python
-
+Python uses == and != for string comparison, "in" and "not in" operators are also available for checking to see whether or not a sub string is contained within a superstring. 
     
 ### Null/nil references
 #### Which does the language use? (null/nil/etc)
 ##### Kotlin
 Kotlin uses "null" for empty objects and null pointers. 
 ##### Python
+In python, the null equivalent is the "None" singleton, which denotes an empty object.
 
 #### Does the language have features for handling null/nil references?
 ##### Kotlin
@@ -411,8 +438,12 @@ val str:String? = "name"
 ``` 
 As a last note, Kotlin has access to the NullPointerException for error handling in regard to null values.
 ##### Python
+Yes, generally None references are handled by throwing a TypeError exception, see code below.
+```python
+    if object is None:
+    	raise TypeError
+```
 
-    
 ### Errors and exception handling
 ##### Kotlin
 In Kotlin, exceptions can be thrown with the 'throw' keyword and uses try and catch statements very similarly to Java. 
@@ -439,6 +470,7 @@ The implementation of exception handling in python is pretty simple, first you d
     try:
     	x = int(input("Please enter a number: "))
     	break
+
     except ValueError:
     	print("Oops!  That was no valid number.  Try again...")
 ```
