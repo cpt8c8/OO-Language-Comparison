@@ -244,6 +244,7 @@ Getters and setters must be built by the user, they are not inherent to python c
 ##### Kotlin
 In Kotlin you have backing fields, which help you refer to the property inside the getter and setter methods. You must use them becuase using the property directly inside the getter or setter causes a recursive call which will generate a StackOverflowError. The Kotlin code in the getters and setters example has these in use (the fields have been named "field" for ease of identification). 
 ##### Python
+In python, backing variables are usually denoted by an underscore preceding the variable name(\_varibalename)
 
 #### Computed properties?
 ##### Kotlin
@@ -265,7 +266,7 @@ class Delegate {
 ```
 So, the get() and set() of the property "ex" are delegated to the getValue() and setValue() methods of the "Delegate()" class. Kotlin's standard library contains a few very helpful standard delegates such as Lazy() (for if the value gets computed only upon first access) and Delegates.observable() (listeners that get notified about changes to this property). 
 ##### Python
-
+Python supports computed attributes, which are attributes that look like a variable but call a function whenever the attribute is referenced.
     
 ### Interfaces / protocols
 #### What does the language support?
@@ -414,6 +415,7 @@ Python has automatic memory management which utilizes dynamic typing and a combi
 ##### Kotlin
 The first of said spaces is the nursery, which holds younger objects and causes garbage collection to run once full. If an object is "old" enough it will be moved into the second space, i.e. the old space, by the garbage collector instead of being destroyed. If the old space hits capacity the garbage collector will run on it, destroying objects that are not being used.
 ##### Python
+Like many modern languages, python uses automatic garbage collection, which periodically scans through memory looking for unused variables, and clearing them out accordingly.
 
 #### Garbage collection?
 ##### Kotlin
